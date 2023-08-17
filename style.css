@@ -1,0 +1,70 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 6.25%;
+
+	--bg-nav: #242424;
+	--bg-dark: #121214;
+	--bg-light: #fff;
+	--tt-time: #121214;
+	--tt-theme: #121214;
+}
+
+body {
+	font-family: 'Roboto';
+}
+
+main {
+	height: 100vh;
+}
+
+section {
+	margin-top: -50px;
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	place-content: center;
+	gap: 25rem;
+	height: 100vh;
+}
+
+nav {
+	background-color: var(--bg-nav);
+	
+	display: flex;
+	gap: 16rem;
+	padding: 22rem 40rem;
+	border-radius: 9999rem;
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+#clock {
+	font-size: 96rem;
+}
+
+.hiden {
+	display: none;
+}
+
+#mode-theme {
+	position: absolute;
+	right: 32rem;
+	top: 32rem;
+}
+
+.light-mode {
+	background-color: var(--bg-light);
+}
+
+.dark-mode {
+	background-color: var(--bg-dark);
+}

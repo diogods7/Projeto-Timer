@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/script.js" type="module" defer></script>
+</head>
+
+<body class="light-mode">
+    <main>
+        <button id="mode-theme">
+            <img id="dark" src="./img/ph_moon-bold.svg">
+            <img id="light" src="./img/ph_sun-bold.svg" class="hiden">
+        </button>
+        <section>
+            <div id="clock">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </div>
+            <nav>
+                <button id="play">
+                    <img src="./img/ph_play-circle.svg" alt="">
+                    <img src="./img/ph_pause-circle.svg" class="hiden" alt="">
+                </button>
+                <button>
+                    <img src="./img/ph_timer.svg" alt="">
+                    <img src="./img/ph_stop-circle.svg" class="hiden" alt="">
+                </button>
+                <button>
+                    <img src="./img/ph_speaker-none.svg" alt="">
+                    <img src="./img/ph_speaker-high.svg" class="hiden" alt="">
+                </button>
+            </nav>
+        </section>
+    </main>
+</body>
+</html>
