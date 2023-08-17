@@ -7,16 +7,33 @@
 :root {
 	font-size: 6.25%;
 
-	--bg-nav: #242424;
-	--bg-dark: #121214;
-	--bg-light: #fff;
-	--tt-time: #121214;
-	--tt-theme: #121214;
+	--bg-nav: hsl(0, 0%, 14%);
+	--tt-theme: hsl(240, 5%, 7%);
 }
 
 body {
 	font-family: 'Roboto';
+	background-color: var(--bg-color);
 }
+
+.light-mode {
+	--bg-color: #fff;
+	--tt-time: hsl(240, 5%, 7%);
+}
+
+.light-mode #light {
+	display: none;
+}
+
+.dark-mode {
+	--bg-color: hsl(240, 5%, 7%);
+	--tt-time: #fff;
+}
+
+.dark-mode #dark {
+	display: none;
+}
+
 
 main {
 	height: 100vh;
@@ -49,6 +66,7 @@ button {
 
 #clock {
 	font-size: 96rem;
+	color: var(--tt-time);
 }
 
 .hiden {
@@ -61,10 +79,53 @@ button {
 	top: 32rem;
 }
 
-.light-mode {
-	background-color: var(--bg-light);
+.play {
+	background-image: url(./img/ph_play-circle.svg);
+	background-repeat: no-repeat;
+	width: 64rem;
+	height: 64rem;
 }
 
-.dark-mode {
-	background-color: var(--bg-dark);
+.pause {
+	background-image: url(./img/ph_pause-circle.svg);
+	background-repeat: no-repeat;
+	width: 64rem;
+	height: 64rem;
+}
+
+.timer {
+	background-image: url(./img/ph_timer.svg);
+	background-repeat: no-repeat;
+	width: 64rem;
+	height: 64rem;
+}
+
+.end {
+	background-image: url(./img/ph_stop-circle.svg);
+	background-repeat: no-repeat;
+	width: 64rem;
+	height: 64rem;
+}
+
+.speaker-none {
+	background-image: url(./img/ph_speaker-none.svg);
+	background-repeat: no-repeat;
+	width: 64rem;
+	height: 64rem;
+}
+
+.speaker-on{
+	background-image: url(./img/ph_speaker-high.svg);
+	background-repeat: no-repeat;
+	width: 64rem;
+	height: 64rem;
+}
+
+.running .play, 
+.running .timer,
+.music-on .speaker-none,
+html:not(.running) .pause,
+html:not(.running) .end,
+html:not(.music-on) .speaker-on {
+	display: none;
 }

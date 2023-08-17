@@ -9,14 +9,14 @@
     <title>Focus Timer</title>
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="./js/script.js" type="module" defer></script>
+    <script src="./js/main.js" type="module" defer></script>
 </head>
 
 <body class="light-mode">
     <main>
         <button id="mode-theme">
             <img id="dark" src="./img/ph_moon-bold.svg">
-            <img id="light" src="./img/ph_sun-bold.svg" class="hiden">
+            <img id="light" src="./img/ph_sun-bold.svg">
         </button>
         <section>
             <div id="clock">
@@ -24,19 +24,13 @@
                 <span>:</span>
                 <span id="seconds">00</span>
             </div>
-            <nav>
-                <button id="play">
-                    <img src="./img/ph_play-circle.svg" alt="">
-                    <img src="./img/ph_pause-circle.svg" class="hiden" alt="">
-                </button>
-                <button>
-                    <img src="./img/ph_timer.svg" alt="">
-                    <img src="./img/ph_stop-circle.svg" class="hiden" alt="">
-                </button>
-                <button>
-                    <img src="./img/ph_speaker-none.svg" alt="">
-                    <img src="./img/ph_speaker-high.svg" class="hiden" alt="">
-                </button>
+            <nav id="controls">
+                <button data-action="toggleRunning" class="play"></button>
+                <button data-action="toggleRunning" class="pause"></button>
+                <button data-action="set" class="timer"></button>
+                <button data-action="reset" class="end"></button>
+                <button data-action="toggleMusic" class="speaker-none"></button>
+                <button data-action="toggleMusic" class="speaker-on"></button>
             </nav>
         </section>
     </main>
