@@ -9,6 +9,8 @@
 
 	--bg-nav: hsl(0, 0%, 14%);
 	--tt-theme: hsl(240, 5%, 7%);
+	--bg-button: hsl(240, 9%, 89%);
+	--bg-button-click: #CB0303;
 }
 
 body {
@@ -37,6 +39,8 @@ body {
 
 main {
 	height: 100vh;
+	display: flex;
+	place-content: center;
 }
 
 section {
@@ -48,10 +52,12 @@ section {
 	gap: 25rem;
 	height: 100vh;
 }
+aside {
+	display: grid;
+	place-content: center;
+}
 
 nav {
-	background-color: var(--bg-nav);
-	
 	display: flex;
 	gap: 16rem;
 	padding: 22rem 40rem;
@@ -62,6 +68,10 @@ button {
 	border: none;
 	background: none;
 	cursor: pointer;
+}
+
+#sounds button{
+	background-color: var(--bg-button);
 }
 
 #clock {
@@ -80,52 +90,67 @@ button {
 }
 
 .play {
-	background-image: url(./img/ph_play-circle.svg);
+	background-image: url(./img/play.svg);
 	background-repeat: no-repeat;
 	width: 64rem;
 	height: 64rem;
 }
 
 .pause {
-	background-image: url(./img/ph_pause-circle.svg);
+	background-image: url(./img/pause.svg);
+	background-repeat: no-repeat;
+	width: 53rem;
+	height: 56rem;
+}
+
+.reset {
+	background-image: url(./img/stop.svg);
 	background-repeat: no-repeat;
 	width: 64rem;
 	height: 64rem;
 }
 
-.timer {
-	background-image: url(./img/ph_timer.svg);
+.more {
+	background-image: url(./img/more.svg);
 	background-repeat: no-repeat;
 	width: 64rem;
 	height: 64rem;
 }
 
-.end {
-	background-image: url(./img/ph_stop-circle.svg);
+.less {
+	background-image: url(./img/less.svg);
 	background-repeat: no-repeat;
 	width: 64rem;
 	height: 64rem;
 }
 
-.speaker-none {
-	background-image: url(./img/ph_speaker-none.svg);
+
+
+.tree {
+	background-image: url(./img/tree.png);
 	background-repeat: no-repeat;
-	width: 64rem;
-	height: 64rem;
+	width: 45rem;
+	height: 56rem;
 }
 
-.speaker-on{
-	background-image: url(./img/ph_speaker-high.svg);
+.rain {
+	background-image: url(./img/cloud.png);
 	background-repeat: no-repeat;
-	width: 64rem;
-	height: 64rem;
+	width: 53rem;
+	height: 56rem;
+}	
+
+.coffee {
+	background-image: url(./img/coffee.png);
+	background-repeat: no-repeat;
+	width: 56rem;
+	height: 56rem;
 }
+
 
 .running .play, 
 .running .timer,
-.music-on .speaker-none,
-html:not(.running) .pause,
-html:not(.running) .end,
-html:not(.music-on) .speaker-on {
+html:not(.running) .pause{
 	display: none;
 }
+
