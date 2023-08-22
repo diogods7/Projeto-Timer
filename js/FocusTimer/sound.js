@@ -6,7 +6,7 @@ export const buttonCoffee = new Audio ('./assets/Cafeteira.wav')
 
 export const buttonFire = new Audio ('./assets/Lareira.wav')
 
-export const kitchenTimer = new Audio('./assets/kitchen-timer-mp3')
+export const kitchenTimer = new Audio('./assets/kitchen-timer.mp3')
 
 export const buttonPressAudio = new Audio('./assets/button-press.wav')
 

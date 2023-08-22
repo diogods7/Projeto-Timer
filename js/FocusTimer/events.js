@@ -18,10 +18,10 @@ export function setMinutes() {
     elements.minutes.addEventListener('focus', () => {
         elements.minutes.textContent = ""
     })
-
-    elements.minutes.onkeypress = (event) => /\d/.test()
-
-    elements.minutes.addEventListener('blur', (event) => {
+        
+        elements.minutes.onkeypress = (event) =>  /\d/.test(event.key)
+        
+        elements.minutes.addEventListener('blur', (event) => {
         let time = event.currentTarget.textContent
         time = time > 60 ? 60 : time
 
