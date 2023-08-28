@@ -13,12 +13,8 @@
 	<script src="./js/main.js" type="module" defer></script>
 </head>
 
-<body class="light-mode">
+<body>
 	<main>
-		<button id="mode-theme">
-			<img id="dark" src="./img/ph_moon-bold.svg">
-			<img id="light" src="./img/ph_sun-bold.svg">
-		</button>
 		<section>
 			<div id="clock">
 				<span id="minutes">00</span>
@@ -29,17 +25,15 @@
 				<button data-action="toggleRunning" class="play"></button>
 				<button data-action="toggleRunning" class="pause"></button>
 				<button data-action="reset" class="reset"></button>
-				<button data-action="" class="more"></button>
-				<button data-action="" class="less"></button>
+				<button data-action="more" class="more"></button>
+				<button data-action="less" class="less"></button>
 			</nav>
 		</section>
-		<aside>
-			<nav id="controls">
+		<aside id="controls">
 				<button data-action="toggleMusic" class="tree"></button>
 				<button data-action="toggleMusic" class="rain"></button>
 				<button data-action="toggleMusic" class="coffee"></button>
 				<button data-action="toggleMusic" class="fire"></button>
-			</nav>
 		</aside>
 	</main>
 </body>

@@ -1,7 +1,7 @@
 import { controls } from "./elements.js";
 import * as actions from './actions.js'
 import * as elements from "./elements.js";
-import state from "./state.js";
+import state from './state.js'
 import { updateDisplay } from "./timer.js";
 
 export function registerControls() {

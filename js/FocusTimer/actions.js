@@ -1,4 +1,4 @@
-import state from "./state.js";
+import state from './state.js'
 import * as element from './elements.js'
 import * as timer from './timer.js'
 import * as sounds from './sound.js'
@@ -14,11 +14,28 @@ export function reset() {
     state.isRunning = false
     document.documentElement.classList.remove('running')
     sounds.buttonPressAudio.play()
-}
-
-export function set(){
     element.minutes.setAttribute('contenteditable', true)
     element.minutes.focus()
+}
+
+export function more() {
+    console.log("MAAAIS 5")
+    if (state.minutes < 55){
+        state.minutes += 5;
+    } else if (state.minutes > 54) {
+        state.minutes = 60;
+    }
+    timer.updateDisplay()
+}
+
+export function less() {
+    console.log("MENOOOOS 5")
+    if (state.minutes < 5){
+        state.minutes = 0;
+    } else if (state.minutes >= 5) {
+        state.minutes -= 5;
+    }
+    timer.updateDisplay()
 }
 
 export function toggleMusic() {
