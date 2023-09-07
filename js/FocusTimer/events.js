@@ -1,16 +1,26 @@
-import { controls } from "./elements.js";
+import { controlsActions, controlsMusic } from "./elements.js";
 import * as actions from './actions.js'
 import * as elements from "./elements.js";
 import state from './state.js'
 import { updateDisplay } from "./timer.js";
+import * as musics from './music.js';
 
 export function registerControls() {
-    controls.addEventListener('click', (event) => {
+    controlsActions.addEventListener('click', (event) => {
         const action = event.target.dataset.action
         if(typeof actions[action] != "function"){
             return
         }
+        console.log(action)
         actions[action]()
+    })
+
+    controlsMusic.addEventListener('click', (event) => {
+        const music = event.target.dataset.action
+        if(typeof musics[music] != "function"){
+            return
+        }
+        musics[music]()
     })
 }
 

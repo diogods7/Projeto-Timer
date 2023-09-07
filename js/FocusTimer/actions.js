@@ -3,6 +3,7 @@ import * as element from './elements.js'
 import * as timer from './timer.js'
 import * as sounds from './sound.js'
 
+
 export function toggleRunning () {
    state.isRunning = document.documentElement.classList.toggle('running')
 
@@ -19,7 +20,6 @@ export function reset() {
 }
 
 export function more() {
-    console.log("MAAAIS 5")
     if (state.minutes < 55){
         state.minutes += 5;
     } else if (state.minutes > 54) {
@@ -29,21 +29,10 @@ export function more() {
 }
 
 export function less() {
-    console.log("MENOOOOS 5")
     if (state.minutes < 5){
         state.minutes = 0;
     } else if (state.minutes >= 5) {
         state.minutes -= 5;
     }
     timer.updateDisplay()
-}
-
-export function toggleMusic() {
-    state.isMute = document.documentElement.classList.toggle('music-on')
-
-    if(state.isMute) {
-        sounds.bgAudio.play()
-    }
-
-    sounds.bgAudio.pause()
 }
