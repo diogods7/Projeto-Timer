@@ -5,3 +5,5 @@ export const controlsMusic = document.getElementById('controls-music')
 export const minutes = document.getElementById('minutes')
 
 export const seconds = document.getElementById('seconds')
+
+export const tree = document.getElementsByClassName("tree")
