@@ -142,7 +142,7 @@ aside button {
 	background-repeat: no-repeat;
 }
 
-#tree-focus {
+.tree-focus {
 	background-image: url(./img/tree-focus.png);
 	background-color: var(--bg-button-click);
 	background-repeat: no-repeat;
